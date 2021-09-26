@@ -1,0 +1,13 @@
+#ifndef BUILDCFG_H
+#define BUILDCFG_H
+
+#cmakedefine DUNE_DYNASTY_VERSION "dd@DUNE_DYNASTY_VERSION@"
+
+#cmakedefine DUNE_DATA_DIR "@DUNE_DATA_DIR@"
+
+#cmakedefine WITH_ACODEC
+#cmakedefine WITH_AUD
+#cmakedefine WITH_FLUIDSYNTH
+#cmakedefine WITH_MAD
+
+#endif
