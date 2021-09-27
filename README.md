@@ -13,7 +13,9 @@ You'll need Homebrew to install the build-time dependencies.
 ```bash
 brew install cmake allegro fluid-synth mad
 cmake .
-LIBRARY_PATH="/opt/homebrew/Cellar/fluid-synth/2.2.3/lib:/opt/homebrew/Cellar/mad/0.15.1b/lib" make -j
+export FLUIDSYNTH_INSTALL_PATH=$(brew info fluid-synth | grep Cellar | head -n 1 | cut -f1 -d" ")
+export MAD_INSTALL_PATH=$(brew info mad | grep Cellar | head -n 1 | cut -f1 -d" ")
+LIBRARY_PATH="${FLUIDSYNTH_INSTALL_PATH}/lib:${MAD_INSTALL_PATH}/lib" make -j
 ```
 
 The game executable will be generated at `./dist/dunedynasty`.
